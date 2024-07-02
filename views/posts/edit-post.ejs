@@ -1,0 +1,33 @@
+<%- include('../partials/header') %>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-lg-8 mx-auto">
+      <div class="card shadow">
+        <div class="card-header">
+          <h2 class="fw-bold text-secondary">Edit Post</h2>
+        </div>
+        <div class="card-body p-4">
+          <form action="/update-post/<%= post._id %>" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="title" value="<%= post.title %>" name="title" required>
+            </div>
+            <div class="mb-3">
+              <label for="content" class="form-label">Content</label>
+              <textarea class="form-control" id="content" name="content" rows="5" required><%= post.content %></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="image" class="form-label">Image</label>
+              <input type="file" class="form-control" id="image" name="image">
+              <div class="mt-2">
+                <img src="/uploads/<%= post.image %>" alt="<%= post.title %>" class="img-fluid img-thumbnail" width="100">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Update Post</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('../partials/footer') %>

@@ -1,0 +1,26 @@
+{
+	"name": "node_auth_posts",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"type": "module",
+	"scripts": {
+		"start": "node server",
+		"dev": "node --watch --env-file=.env server"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"connect-flash": "^0.1.1",
+		"connect-mongodb-session": "^5.0.0",
+		"cookie-parser": "^1.4.6",
+		"ejs": "^3.1.10",
+		"express": "^4.19.2",
+		"express-session": "^1.18.0",
+		"mongoose": "^8.4.0",
+		"multer": "^1.4.5-lts.1",
+		"nodemailer": "^6.9.13"
+	}
+}

@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-lg-10 mx-auto">
+      <div class="card shadow">
+        <div class="card-body p-5">
+          <img src="/uploads/<%= post.image %>" class="img-fluid" alt="<%= post.title %>">
+          <div class="lead my-3 d-flex align-items-center fw-semibold justify-content-between text-secondary flex-wrap gap-2">
+            <div>Author: <%= post.user.name %></div>
+            <div>Created: <%= post.createdAt.toLocaleString() %></div>
+          </div>
+          <h1 class="text-secondary fw-bold">
+            <%= post.title %>
+          </h1>
+          <p>
+            <%= post.content %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('../partials/footer') %>

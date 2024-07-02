@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-lg-8 mx-auto">
+      <div class="card shadow">
+        <div class="card-header">
+          <h2 class="fw-bold text-secondary">Create New Post</h2>
+        </div>
+        <div class="card-body p-4">
+          <form action="/create-post" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            <div class="mb-3">
+              <label for="content" class="form-label">Content</label>
+              <textarea class="form-control" id="content" name="content" rows="5" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="image" class="form-label">Image</label>
+              <input type="file" class="form-control" id="image" name="image" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Create Post</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('../partials/footer') %>
